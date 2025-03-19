@@ -1,0 +1,19 @@
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/variables";
+
+$alpha: rgb(0, 42, 67);
+$beta: rgb(143, 146, 149);
+$orange:rgb(235, 137, 81) ;    
+$brown: rgb(128, 81, 58);       
+$colors: (
+    "alpha": $alpha , 
+    "beta": $beta ,
+    "orange": $orange ,
+    "brown": $brown ,
+);
+$theme-colors: map-merge($colors , $theme-colors);
+
+$spacer: 0.5rem;
+@for $i from 1 through 100 {
+$spacers: map-merge($spacers, ($i : $spacer * $i) );
+}       

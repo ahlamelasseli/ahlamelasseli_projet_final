@@ -1,0 +1,24 @@
+header{
+    position: fixed;
+    width: 100vw !important;
+    background-color: white;
+    z-index: 2000;
+
+    nav{
+        box-shadow: 5px 10px 8px 10px #888888;
+        background-color: white;
+        border-radius: 22px;
+        text-align: center;
+        .navigation{
+            gap: 10px!important;
+            align-items: center;
+            a{
+            color: #000;
+            text-decoration: none;
+            }
+            .icons{
+                color: #000;
+            }
+        }
+    }
+}

@@ -1,0 +1,13 @@
+@import "./modules/home/header";
+@import "./modules/home/main";
+@import "./modules/home/footer";
+
+@font-face{
+    font-family: "title-font";
+    src: url("../../public/fonts/Questrial-Regular.ttf");
+
+}
+@font-face{
+    font-family: "navbar";
+    src: url("../../public/fonts/NotoSans-Regular.ttf")
+}
