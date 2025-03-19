@@ -50201,7 +50201,8 @@ main .child {
   #portfolio .portfolio div {
     width: 100% !important;
   }
-  #portfolio .portfolio .left-content, #portfolio .portfolio .right-content {
+  #portfolio .portfolio .left-content,
+  #portfolio .portfolio .right-content {
     width: 95% !important;
     padding-bottom: 2vh !important;
   }
@@ -50240,7 +50241,7 @@ main .child {
     width: 100% !important;
   }
   .contact .info {
-    width: 100%;
+    width: 100% !important;
   }
   .resume {
     padding-top: 10vh;
@@ -50363,7 +50364,8 @@ main .child {
   #portfolio .portfolio div {
     width: 100% !important;
   }
-  #portfolio .portfolio .left-content, #portfolio .portfolio .right-content {
+  #portfolio .portfolio .left-content,
+  #portfolio .portfolio .right-content {
     width: 95% !important;
     padding-bottom: 2vh !important;
   }

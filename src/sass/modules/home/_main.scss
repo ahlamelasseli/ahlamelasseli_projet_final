@@ -18,10 +18,11 @@ main {
         width: 100%;
         padding-top: 40vh !important;
 
-        .flex{
+        .flex {
 
             font-family: "title-font";
         }
+
         .left {
             button {
                 border: none;
@@ -112,57 +113,65 @@ main {
 }
 
 // portfolio
-#portfolio{
-    .portfolio{
-        div{
-            h1{
+#portfolio {
+    .portfolio {
+        div {
+            h1 {
                 background: -webkit-linear-gradient(60deg, rgba(81, 65, 62, 1), rgba(166, 94, 55, 1) 72%);
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
                 font-family: 'title-font';
                 font-weight: bold;
             }
-            svg{
+
+            svg {
                 color: rgb(252, 192, 160);
                 width: 20% !important;
             }
-            p{
+
+            p {
                 font-family: "p-font";
                 font-size: 16px;
                 color: rgb(69, 74, 78);
             }
-            .quis-p{
+
+            .quis-p {
                 width: 50%;
             }
         }
-        div{
-            div{
-                a{
+
+        div {
+            div {
+                a {
                     font-family: 'p-font';
                     font-size: 0.938rem;
                     transition: 0.5s;
                 }
-                a:nth-child(1){
+
+                a:nth-child(1) {
                     background-color: $orange;
                     color: white !important;
                     scale: 100%;
                 }
-                .hover-stat:hover{
+
+                .hover-stat:hover {
                     background-color: rgb(255, 233, 221);
                     color: $orange !important;
                     scale: 110%;
                 }
-                .hover-stat:focus{
+
+                .hover-stat:focus {
                     background-color: $orange;
                     color: white !important;
                     scale: 110%;
                 }
             }
         }
+
         .p-bottom {
             .portfolio-menu {
                 gap: 1rem;
-    
+
                 .p-hover {
                     text-decoration: none;
                     padding: 0.5rem 1rem;
@@ -173,29 +182,29 @@ main {
                     font-family: "Roboto", sans-serif;
                     border: none;
                 }
-    
+
                 .p-hover:hover {
                     background-color: #fcebe0;
                     color: $beta;
                 }
-    
+
                 .p-hover:focus {
                     color: white;
                     background-color: $orange;
                 }
-    
+
             }
-    
+
             .portfolio-container {
                 display: flex;
                 flex-wrap: wrap;
                 justify-content: center;
                 gap: 15px;
                 margin-top: 20px;
-    
+
                 div {
                     display: block;
-    
+
                     .p-item {
                         display: flex;
                         align-items: left;
@@ -204,32 +213,32 @@ main {
                         border-radius: 10px;
                         box-shadow: $box-shadow;
                         transition: 0.3s;
-    
+
                         img {
                             width: 40rem;
                             border-top-left-radius: 10px;
                             border-top-right-radius: 10px;
                         }
-    
+
                         .p-card-text {
                             display: flex;
                             align-items: left;
                             justify-content: center;
                             flex-direction: column;
                             padding: 1.5rem;
-    
+
                             h6 {
                                 color: $beta;
                                 font-family: "Roboto", sans-serif;
                                 font-weight: 600;
                             }
-    
+
                             h4 {
                                 color: $alpha;
                                 font-family: "Questrial", sans-serif;
                                 font-weight: 600;
                             }
-    
+
                             p {
                                 font-size: 14px;
                                 color: grey;
@@ -238,7 +247,7 @@ main {
                         }
                     }
                 }
-    
+
                 .p-all-items {
                     display: grid;
                     grid-template-columns: repeat(2, 1fr);
@@ -247,7 +256,7 @@ main {
             }
         }
     }
-    
+
     #sidebar:has(button[data-filter="web"]:focus)~.portfolio-container #all-items .p-item:not(.web),
     #sidebar:has(button[data-filter="graphics"]:focus)~.portfolio-container #all-items .p-item:not(.graphics),
     #sidebar:has(button[data-filter="motion"]:focus)~.portfolio-container #all-items .p-item:not(.motion),
@@ -255,133 +264,148 @@ main {
         display: none;
     }
 }
-@media (max-width:480px){
 
-.about{
+@media (max-width:480px) {
 
-    .part-progress{
+    .about {
 
-.child{
-    padding-top: 10vh;
-}
+        .part-progress {
+
+            .child {
+                padding-top: 10vh;
+            }
+
+        }
+    }
+
+    .testimonial {
+
+        .carousel-part {
+
+            .big-img {
+                display: none;
+            }
+
+        }
 
     }
-}
 
-.testimonial{
+    .services {
 
-.carousel-part{
+        flex-direction: column;
 
-.big-img{
-    display: none;
-}
+        .left-services {
+            .first {
 
-}
+                flex-direction: column;
 
-}
-.services{
+            }
 
-flex-direction: column;
-.left-services{
-.first{
+            .second {
+                flex-direction: column;
 
-    flex-direction: column;
-
-}
-.second{
-    flex-direction: column;
-
-}
-}
-}
+            }
+        }
+    }
 
 
-    #portfolio{
-        .portfolio{
-            div{
+    #portfolio {
+        .portfolio {
+            div {
                 width: 100% !important;
             }
-            .left-content , .right-content{
+
+            .left-content,
+            .right-content {
                 width: 95% !important;
                 padding-bottom: 2vh !important;
             }
         }
-        .quis-p{
+
+        .quis-p {
             width: 100% !important;
         }
     }
-        .p-top {
-            p {
-                width: 90% !important;
-            }
+
+    .p-top {
+        p {
+            width: 90% !important;
         }
-    
-        .p-bottom {
-            .portfolio-menu {
-                flex-wrap: wrap !important;
-            }
-            .portfolio-container {
-                padding: 0 1rem;
-                .p-all-items {
-                    display: flex !important;
-                    align-items: center !important;
-                    justify-content: center !important;
-                    flex-direction: column !important;
-    
-                    .p-item {
-                        img {
-                            width: 100% !important;
-                        }
-    
-                        .p-card-text {
-                            padding: 1rem;
-    
-                            p {
-                                font-size: 12px;
-                            }
+    }
+
+    .p-bottom {
+        .portfolio-menu {
+            flex-wrap: wrap !important;
+        }
+
+        .portfolio-container {
+            padding: 0 1rem;
+
+            .p-all-items {
+                display: flex !important;
+                align-items: center !important;
+                justify-content: center !important;
+                flex-direction: column !important;
+
+                .p-item {
+                    img {
+                        width: 100% !important;
+                    }
+
+                    .p-card-text {
+                        padding: 1rem;
+
+                        p {
+                            font-size: 12px;
                         }
                     }
                 }
             }
         }
+    }
 
-.contact{
-flex-direction:column ;
-width: 100%;
-.left{
-    width: 100% !important;
-}
-.info{
-    width: 100%;
-}
+    .contact {
+        flex-direction: column;
+        width: 100%;
 
-
-}
-
-.resume{
-    padding-top: 10vh;
-    padding-inline: 3vw;
-}
-
-
-}
-    @media (max-width: 480px) {
-        .home{
-            .left{
-                h1{
-                    font-size: 80px;
-                    font-family: "title-font";
-                }
-            }
-            .flex{
-                flex-direction: column;
-            }
-        }
-        .about .info{
+        .left {
             width: 100% !important;
         }
 
+        .info {
+            width: 100% !important;
         }
+
+
+    }
+
+    .resume {
+        padding-top: 10vh;
+        padding-inline: 3vw;
+    }
+
+
+}
+
+@media (max-width: 480px) {
+    .home {
+        .left {
+            h1 {
+                font-size: 80px;
+                font-family: "title-font";
+            }
+        }
+
+        .flex {
+            flex-direction: column;
+        }
+    }
+
+    .about .info {
+        width: 100% !important;
+    }
+
+}
 
 
 
@@ -447,7 +471,7 @@ width: 100%;
 
         }
 
-        
+
         .first {
             gap: 20px;
             padding-bottom: 3vh;
@@ -458,11 +482,13 @@ width: 100%;
             gap: 20px;
         }
     }
-    .left-services:hover > :not(:hover){
+
+    .left-services:hover> :not(:hover) {
         opacity: 0.3;
     }
-    .aoa{
-        transform: scale(1,1);
+
+    .aoa {
+        transform: scale(1, 1);
     }
 }
 
@@ -536,29 +562,33 @@ width: 100%;
         }
     }
 }
-@media (max-width:480px){
-.home{
 
-    .left{
-        h1{
-            font-size:medium !important ;
+@media (max-width:480px) {
+    .home {
+
+        .left {
+            h1 {
+                font-size: medium !important;
+            }
         }
     }
-}
 
 
 
-    #portfolio{
-        .portfolio{
-            div{
+    #portfolio {
+        .portfolio {
+            div {
                 width: 100% !important;
             }
-            .left-content , .right-content{
+
+            .left-content,
+            .right-content {
                 width: 95% !important;
                 padding-bottom: 2vh !important;
             }
         }
-        .quis-p{
+
+        .quis-p {
             width: 100% !important;
         }
     }
