@@ -49950,6 +49950,54 @@ header nav .navigation .icons {
   color: #000;
 }
 
+#menu,
+label {
+  display: none;
+}
+
+.close,
+.open {
+  display: none;
+}
+
+@media (max-width: 480px) {
+  header nav {
+    width: 70%;
+  }
+  header nav .navigation {
+    background-color: white;
+    position: fixed;
+    width: 100%;
+    right: -200%;
+    height: 95vh;
+    top: 0%;
+    transition: 0.5s;
+    flex-direction: column;
+    justify-content: start !important;
+    align-items: start !important;
+    gap: 1rem !important;
+    padding: 5vw !important;
+  }
+  header nav .icons .open {
+    display: block !important;
+  }
+  header nav label,
+  header nav .close {
+    display: block;
+  }
+  header nav .close {
+    align-self: end;
+  }
+  header #menu {
+    display: none;
+  }
+  header #menu:checked ~ .navigation {
+    right: 0%;
+  }
+  header #menu:checked ~ .f-close {
+    display: block;
+  }
+}
 body h1, body .h1 {
   font-family: "title-font";
 }
@@ -49959,7 +50007,10 @@ body p {
 
 main .home {
   width: 100%;
-  padding-top: 12vh;
+  padding-top: 40vh !important;
+}
+main .home .flex {
+  font-family: "title-font";
 }
 main .home .left button {
   border: none;
@@ -50013,139 +50064,201 @@ main .child {
   width: 2px !important;
 }
 
-.portfolio div svg {
-  width: 17% !important;
-}
-.portfolio #portfolio .portfolio div h1, .portfolio #portfolio .portfolio div .h1 {
+#portfolio .portfolio div h1, #portfolio .portfolio div .h1 {
   background: -webkit-linear-gradient(60deg, rgb(81, 65, 62), rgb(166, 94, 55) 72%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-family: "title-font";
   font-weight: bold;
 }
-.portfolio #portfolio .portfolio div svg {
+#portfolio .portfolio div svg {
   color: rgb(252, 192, 160);
   width: 20% !important;
 }
-.portfolio #portfolio .portfolio div p {
+#portfolio .portfolio div p {
   font-family: "p-font";
   font-size: 16px;
   color: rgb(69, 74, 78);
 }
-.portfolio #portfolio .portfolio div .quis-p {
+#portfolio .portfolio div .quis-p {
   width: 50%;
 }
-.portfolio #portfolio .portfolio div div a {
+#portfolio .portfolio div div a {
   font-family: "p-font";
   font-size: 0.938rem;
   transition: 0.5s;
 }
-.portfolio #portfolio .portfolio div div a:nth-child(1) {
+#portfolio .portfolio div div a:nth-child(1) {
   background-color: rgb(235, 137, 81);
   color: white !important;
   scale: 100%;
 }
-.portfolio #portfolio .portfolio div div .hover-stat:hover {
+#portfolio .portfolio div div .hover-stat:hover {
   background-color: rgb(255, 233, 221);
   color: rgb(235, 137, 81) !important;
   scale: 110%;
 }
-.portfolio #portfolio .portfolio div div .hover-stat:focus {
+#portfolio .portfolio div div .hover-stat:focus {
   background-color: rgb(235, 137, 81);
   color: white !important;
   scale: 110%;
 }
-.portfolio #portfolio .portfolio .p-bottom .portfolio-menu {
+#portfolio .portfolio .p-bottom .portfolio-menu {
   gap: 1rem;
 }
-.portfolio #portfolio .portfolio .p-bottom .portfolio-menu .p-hover {
+#portfolio .portfolio .p-bottom .portfolio-menu .p-hover {
   text-decoration: none;
   padding: 0.5rem 1rem;
   background-color: transparent;
-  border-radius: 22px;
+  border-radius: 10px;
   color: rgb(0, 42, 67);
   transition: 0.3s;
   font-family: "Roboto", sans-serif;
   border: none;
 }
-.portfolio #portfolio .portfolio .p-bottom .portfolio-menu .p-hover:hover {
+#portfolio .portfolio .p-bottom .portfolio-menu .p-hover:hover {
   background-color: #fcebe0;
   color: rgb(143, 146, 149);
 }
-.portfolio #portfolio .portfolio .p-bottom .portfolio-menu .p-hover:focus {
+#portfolio .portfolio .p-bottom .portfolio-menu .p-hover:focus {
   color: white;
   background-color: rgb(235, 137, 81);
 }
-.portfolio #portfolio .portfolio .p-bottom .portfolio-container {
+#portfolio .portfolio .p-bottom .portfolio-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 15px;
   margin-top: 20px;
 }
-.portfolio #portfolio .portfolio .p-bottom .portfolio-container div {
+#portfolio .portfolio .p-bottom .portfolio-container div {
   display: block;
 }
-.portfolio #portfolio .portfolio .p-bottom .portfolio-container div .p-item {
+#portfolio .portfolio .p-bottom .portfolio-container div .p-item {
   display: flex;
   align-items: left;
   justify-content: center;
   flex-direction: column;
-  border-radius: 22px;
-  box-shadow: 5px 10px 8px 10px #afaeae !important;
+  border-radius: 10px;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
   transition: 0.3s;
 }
-.portfolio #portfolio .portfolio .p-bottom .portfolio-container div .p-item img {
+#portfolio .portfolio .p-bottom .portfolio-container div .p-item img {
   width: 40rem;
-  border-top-left-radius: 22px;
-  border-top-right-radius: 22px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
-.portfolio #portfolio .portfolio .p-bottom .portfolio-container div .p-item .p-card-text {
+#portfolio .portfolio .p-bottom .portfolio-container div .p-item .p-card-text {
   display: flex;
   align-items: left;
   justify-content: center;
   flex-direction: column;
   padding: 1.5rem;
 }
-.portfolio #portfolio .portfolio .p-bottom .portfolio-container div .p-item .p-card-text h6, .portfolio #portfolio .portfolio .p-bottom .portfolio-container div .p-item .p-card-text .h6 {
+#portfolio .portfolio .p-bottom .portfolio-container div .p-item .p-card-text h6, #portfolio .portfolio .p-bottom .portfolio-container div .p-item .p-card-text .h6 {
   color: rgb(143, 146, 149);
   font-family: "Roboto", sans-serif;
   font-weight: 600;
 }
-.portfolio #portfolio .portfolio .p-bottom .portfolio-container div .p-item .p-card-text h4, .portfolio #portfolio .portfolio .p-bottom .portfolio-container div .p-item .p-card-text .h4 {
+#portfolio .portfolio .p-bottom .portfolio-container div .p-item .p-card-text h4, #portfolio .portfolio .p-bottom .portfolio-container div .p-item .p-card-text .h4 {
   color: rgb(0, 42, 67);
   font-family: "Questrial", sans-serif;
   font-weight: 600;
 }
-.portfolio #portfolio .portfolio .p-bottom .portfolio-container div .p-item .p-card-text p {
+#portfolio .portfolio .p-bottom .portfolio-container div .p-item .p-card-text p {
   font-size: 14px;
   color: grey;
   font-family: "Roboto", sans-serif;
 }
-.portfolio #portfolio .portfolio .p-bottom .portfolio-container .p-all-items {
+#portfolio .portfolio .p-bottom .portfolio-container .p-all-items {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
 }
-.portfolio #portfolio #sidebar:has(button[data-filter=web]:focus) ~ .portfolio-container #all-items .p-item:not(.web),
-.portfolio #portfolio #sidebar:has(button[data-filter=graphics]:focus) ~ .portfolio-container #all-items .p-item:not(.graphics),
-.portfolio #portfolio #sidebar:has(button[data-filter=motion]:focus) ~ .portfolio-container #all-items .p-item:not(.motion),
-.portfolio #portfolio #sidebar:has(button[data-filter=branding]:focus) ~ .portfolio-container #all-items .p-item:not(.branding) {
+#portfolio #sidebar:has(button[data-filter=web]:focus) ~ .portfolio-container #all-items .p-item:not(.web),
+#portfolio #sidebar:has(button[data-filter=graphics]:focus) ~ .portfolio-container #all-items .p-item:not(.graphics),
+#portfolio #sidebar:has(button[data-filter=motion]:focus) ~ .portfolio-container #all-items .p-item:not(.motion),
+#portfolio #sidebar:has(button[data-filter=branding]:focus) ~ .portfolio-container #all-items .p-item:not(.branding) {
   display: none;
 }
+
 @media (max-width: 480px) {
-  .portfolio #portfolio .portfolio div {
+  .about .part-progress .child {
+    padding-top: 10vh;
+  }
+  .testimonial .carousel-part .big-img {
+    display: none;
+  }
+  .services {
+    flex-direction: column;
+  }
+  .services .left-services .first {
+    flex-direction: column;
+  }
+  .services .left-services .second {
+    flex-direction: column;
+  }
+  #portfolio .portfolio div {
     width: 100% !important;
   }
-  .portfolio #portfolio .portfolio .left-content, .portfolio #portfolio .portfolio .right-content {
+  #portfolio .portfolio .left-content, #portfolio .portfolio .right-content {
     width: 95% !important;
     padding-bottom: 2vh !important;
   }
-  .portfolio #portfolio .quis-p {
+  #portfolio .quis-p {
+    width: 100% !important;
+  }
+  .p-top p {
+    width: 90% !important;
+  }
+  .p-bottom .portfolio-menu {
+    flex-wrap: wrap !important;
+  }
+  .p-bottom .portfolio-container {
+    padding: 0 1rem;
+  }
+  .p-bottom .portfolio-container .p-all-items {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex-direction: column !important;
+  }
+  .p-bottom .portfolio-container .p-all-items .p-item img {
+    width: 100% !important;
+  }
+  .p-bottom .portfolio-container .p-all-items .p-item .p-card-text {
+    padding: 1rem;
+  }
+  .p-bottom .portfolio-container .p-all-items .p-item .p-card-text p {
+    font-size: 12px;
+  }
+  .contact {
+    flex-direction: column;
+    width: 100%;
+  }
+  .contact .left {
+    width: 100% !important;
+  }
+  .contact .info {
+    width: 100%;
+  }
+  .resume {
+    padding-top: 10vh;
+    padding-inline: 3vw;
+  }
+}
+@media (max-width: 480px) {
+  .home .left h1, .home .left .h1 {
+    font-size: 80px;
+    font-family: "title-font";
+  }
+  .home .flex {
+    flex-direction: column;
+  }
+  .about .info {
     width: 100% !important;
   }
 }
-
 .testimonial div svg {
   width: 2px !important;
 }
@@ -50243,6 +50356,21 @@ main .child {
   padding: 0.5rem;
 }
 
+@media (max-width: 480px) {
+  .home .left h1, .home .left .h1 {
+    font-size: medium !important;
+  }
+  #portfolio .portfolio div {
+    width: 100% !important;
+  }
+  #portfolio .portfolio .left-content, #portfolio .portfolio .right-content {
+    width: 95% !important;
+    padding-bottom: 2vh !important;
+  }
+  #portfolio .quis-p {
+    width: 100% !important;
+  }
+}
 footer {
   padding-top: 5vh;
 }
